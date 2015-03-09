@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-testflightdetect",
+  "version": "0.1.1-dev",
+  "description": "Cordova Device Plugin",
+  "cordova": {
+    "id": "org.apache.cordova.device",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git"
+  },
+  "keywords": [
+    "cordova",
+    "testflight",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "ArcticusTech",
+  "license": "Apache 2.0"
+}
