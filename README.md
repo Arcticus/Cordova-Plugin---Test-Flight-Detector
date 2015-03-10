@@ -20,11 +20,11 @@
 Cordova TestFlight Detector Plugin
 ===========================
 
-# Plugin's Purpose
+## Plugin's Purpose
 
 The purpose of the plugin is to create a method for [Cordova](https://cordova.apache.org/) based iOS applications to determine at runtime whether an application was installed via the Apple App Store or as a beta app via [TestFlight](https://developer.apple.com/testflight/) or launched from XCode to an attached USB device or iOS Simulator.  This allows a developer to use a single build and exercise separate code for testing versus production. 
 
-# com.gosyntactix.cordova.testflightdetector
+## com.gosyntactix.cordova.testflightdetector
 
 This plugin defines a global `TFDetect` object, which on app launch queries whether an app was installed via TestFlight or launched from XCode.  The launch from XCode works for both the Simulator and an attached USB device.
 
@@ -35,38 +35,38 @@ Although the object is in the global scope, it is not available until after the 
         console.log(TFDetect.isRunningTestFlightBeta);
     }
 
-## Installation
+### Installation
 
     cordova plugin add com.gosyntactix.cordova.testflightdetector
 
-## Properties
+### Properties
 
 - TFDetect.isTFXC
 - TFDetect.isAppStore
 
-## TFDetect.isRunningTestFlightBeta
+### TFDetect.isRunningTestFlightBeta
 
 Returns **<u>true</u>** if the app was installed via TestFlight or launched from XCode to an attached USB device or iOS Simulator.  Returns **<u>false</u>** if the app was installed via the official Apple App Store.
 
-### Supported Platforms
+#### Supported Platforms
 
 - iOS
 
-### Quick Example
+#### Quick Example
    
     if (TFDetect.isTFXC) {
     	//DEBUG CODE HERE    } else {
     	//PRODUCTION CODE HERE    }
 
-## TFDetect.isAppStore
+### TFDetect.isAppStore
 
 Returns **<u>true</u>** if the app was installed via the Apple App Store.  Returns **<u>false</u>** if the app was installed via TestFlight or launched from XCode to an attached USB device or iOS Simulator. 
 
-### Supported Platforms
+#### Supported Platforms
 
 - iOS
 
-### Quick Example
+#### Quick Example
    
     if (TFDetect.isAppStore) {
     	//PRODUCTION CODE HERE    } else {
