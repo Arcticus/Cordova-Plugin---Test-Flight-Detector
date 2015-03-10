@@ -1,23 +1,18 @@
 {
-  "name": "Cordova-Plugin---Test-Flight-Detector",
-  "version": "0.1.1-dev",
-  "description": "Cordova iOS Plugin that detects if app was installed via TestFlight vs. Apple App Store",
-  "cordova": {
-    "id": "com.gosyntactix.cordova.testflightdetector",
+    "version": "0.1.2-dev",
+    "name": "com.gosyntactix.cordova.testflightdetector",
+    "cordova_name": "TestFlight Detector",
+    "description": "Detects if app was installed via TestFlight vs. Apple App Store",
+    "license": "Apache 2.0",
+    "repo": "https://github.com/Arcticus/Cordova-Plugin---Test-Flight-Detector.git",
+    "issue": "https://github.com/Arcticus/Cordova-Plugin---Test-Flight-Detector/issues",
+    "keywords": [
+        "cordova",
+        "testflight"
+    ],
     "platforms": [
-      "ios"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Arcticus/Cordova-Plugin---Test-Flight-Detector.git"
-  },
-  "keywords": [
-    "cordova",
-    "testflight",
-    "ecosystem:cordova",
-    "cordova-ios"
-  ],
-  "author": "Arcticus",
-  "license": "Apache 2.0"
+        "ios"
+    ],
+    "engines": [],
+    "englishdoc": "<!---\n    Licensed to the Apache Software Foundation (ASF) under one\n    or more contributor license agreements.  See the NOTICE file\n    distributed with this work for additional information\n    regarding copyright ownership.  The ASF licenses this file\n    to you under the Apache License, Version 2.0 (the\n    \"License\"); you may not use this file except in compliance\n    with the License.  You may obtain a copy of the License at\n\n      http://www.apache.org/licenses/LICENSE-2.0\n\n    Unless required by applicable law or agreed to in writing,\n    software distributed under the License is distributed on an\n    \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n    KIND, either express or implied.  See the License for the\n    specific language governing permissions and limitations\n    under the License.\n-->\n\nCordova TestFlight Detector Plugin\n===========================\n\n## Plugin's Purpose\n\nThe purpose of the plugin is to create a method for [Cordova](https://cordova.apache.org/) based iOS applications to determine at runtime whether an application was installed via the Apple App Store or as a beta app via [TestFlight](https://developer.apple.com/testflight/) or launched from XCode to an attached USB device or iOS Simulator.  This allows a developer to use a single build and exercise separate code for testing versus production. \n\n## com.gosyntactix.cordova.testflightdetector\n\nThis plugin defines a global `TFDetect` object, which on app launch queries whether an app was installed via TestFlight or launched from XCode.  The launch from XCode works for both the Simulator and an attached USB device.\n\nAlthough the object is in the global scope, it is not available until after the `deviceready` event.\n\n    document.addEventListener(\"deviceready\", onDeviceReady, false);\n    function onDeviceReady() {\n        console.log(TFDetect.isRunningTestFlightBeta);\n    }\n\n### Installation\n\n    cordova plugin add com.gosyntactix.cordova.testflightdetector\n\n### Properties\n\n- TFDetect.isTFXC\n- TFDetect.isAppStore\n\n### TFDetect.isRunningTestFlightBeta\n\nReturns **<u>true</u>** if the app was installed via TestFlight or launched from XCode to an attached USB device or iOS Simulator.  Returns **<u>false</u>** if the app was installed via the official Apple App Store.\n\n#### Supported Platforms\n\n- iOS\n\n#### Quick Example\n   \n    if (TFDetect.isTFXC) {\n    \t//DEBUG CODE HERE\r    } else {\n    \t//PRODUCTION CODE HERE\r    }\n\n### TFDetect.isAppStore\n\nReturns **<u>true</u>** if the app was installed via the Apple App Store.  Returns **<u>false</u>** if the app was installed via TestFlight or launched from XCode to an attached USB device or iOS Simulator. \n\n#### Supported Platforms\n\n- iOS\n\n#### Quick Example\n   \n    if (TFDetect.isAppStore) {\n    \t//PRODUCTION CODE HERE\r    } else {\n    \t//DEBUG CODE HERE\r    }\n"
 }

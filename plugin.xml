@@ -18,7 +18,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="com.gosyntactix.cordova.testflightdetector"
-    version="0.1.1-dev">
+    version="0.1.2-dev">
     <name>TestFlight Detector</name>
     <description>Detects if app was installed via TestFlight vs. Apple App Store</description>
     <license>Apache 2.0</license>
