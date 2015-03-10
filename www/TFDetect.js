@@ -44,7 +44,8 @@ function TFDetect() {
             //ignoring info.cordova returning from native, we should use value from cordova.version defined in cordova.js
 
             me.available = true;
-            me.isRunningTestFlightBeta = info;
+            me.isTFXC = info;
+            me.isAppStore = !info;
 
             channel.onCordovaTFDetectReady.fire();
         },function(e) {

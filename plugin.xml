@@ -17,14 +17,14 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.gosyntactix.cordova.testflightdetect"
+    id="com.gosyntactix.cordova.testflightdetector"
     version="0.1.1-dev">
-    <name>TestFlight Detect</name>
+    <name>TestFlight Detector</name>
     <description>Detects if app was installed via TestFlight vs. Apple App Store</description>
     <license>Apache 2.0</license>
     <keywords>cordova,testflight</keywords>
-    <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git</repo>
-    <issue>https://issues.apache.org/jira/browse/CB/component/12320648</issue>
+    <repo>https://github.com/Arcticus/Cordova-Plugin---Test-Flight-Detector.git</repo>
+    <issue>https://github.com/Arcticus/Cordova-Plugin---Test-Flight-Detector/issues</issue>
 
     <js-module src="www/TFDetect.js" name="TFDetect">
         <clobbers target="TFDetect" />

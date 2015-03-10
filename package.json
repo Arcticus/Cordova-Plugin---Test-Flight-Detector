@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-testflightdetect",
+  "name": "Cordova-Plugin---Test-Flight-Detector",
   "version": "0.1.1-dev",
-  "description": "Cordova Device Plugin",
+  "description": "Cordova iOS Plugin that detects if app was installed via TestFlight vs. Apple App Store",
   "cordova": {
-    "id": "org.apache.cordova.device",
+    "id": "com.gosyntactix.cordova.testflightdetector",
     "platforms": [
       "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git"
+    "url": "https://github.com/Arcticus/Cordova-Plugin---Test-Flight-Detector.git"
   },
   "keywords": [
     "cordova",
@@ -18,6 +18,6 @@
     "ecosystem:cordova",
     "cordova-ios"
   ],
-  "author": "ArcticusTech",
+  "author": "Arcticus",
   "license": "Apache 2.0"
 }
