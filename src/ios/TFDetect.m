@@ -22,13 +22,24 @@
 
 @implementation TFDetect
 
-#if TARGET_IPHONE_SIMULATOR
+/* #if TARGET_IPHONE_SIMULATOR
   BOOL const isOnSim = YES;
 # else
   BOOL const isOnSim = NO;
-#endif
+#endif */
 
 - (void)detect:(CDVInvokedUrlCommand*)command
+{
+BOOL isDebug = NO;
+#ifdef DEBUG
+    isDebug = YES;
+#endif
+ 
+ CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:isDebug];
+ [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+/* - (void)detect:(CDVInvokedUrlCommand*)command
 {
   NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];
   NSString *receiptURLString = [receiptURL path];
@@ -39,6 +50,6 @@
   CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsBool:isRunningTestFlightBeta];
 
   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
+} */
 
 @end
